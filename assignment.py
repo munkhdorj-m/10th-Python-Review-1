@@ -21,6 +21,6 @@ def sum_is_even_or_odd(a, b, c, d):
     pass
 
 # Exercise 5
-def first_last_equal(num):
+def divisible_by_sum_of_digits(num):
     # Write your code here
     pass

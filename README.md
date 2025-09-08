@@ -1,7 +1,7 @@
 # Python Review 1
 
-Python Loops PPT:
-https://docs.google.com/presentation/d/1cRZd43s_xyNBLZ6vgFiUILPUMMtWDtBO/edit?usp=sharing&ouid=118175980541210638913&rtpof=true&sd=true
+Python Review PDF:
+https://drive.google.com/file/d/1_Spi5yo7H50BZ933mYh-zUveuMAroKe4/view?usp=sharing
 
 ---
 

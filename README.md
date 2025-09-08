@@ -73,7 +73,7 @@ Input 4 numbers and check if their sum is even or odd.
     Input: 1 2 3 4
     Output: Even
     
-    Input: 5 7 9 11
+    Input: 5 6 2 2
     Output: Odd
     
     Input: 2 2 2 2
@@ -84,17 +84,17 @@ Input 4 numbers and check if their sum is even or odd.
 
 **Problem:**
 
-Input a number and check if the first and last digits are equal.
+Input a three-digit number and check if it is divisible by the sum of its digits.
 
 **Example**
 
-    Input: 121
+    Input: 150
     Output: True
     
-    Input: 4564
-    Output: True
-    
-    Input: 89
+    Input: 456
     Output: False
+    
+    Input: 132
+    Output: True
 ---
 

@@ -1,17 +1,6 @@
 import pytest
 from assignment import check_number, rectangle_area, is_divisible_by_5, sum_is_even_or_odd, divisible_by_sum_of_digits
 
-@pytest.mark.parametrize("num, expected", [
-    (5, "Positive"),
-    (-7, "Negative"),
-    (0, "Neither"),
-    (123, "Positive"),
-    (-1, "Negative")
-])
-def test1(num, expected):
-    assert check_number(num) == expected
-
-
 @pytest.mark.parametrize("length, width, expected", [
     (5, 3, 15),
     (10, 2, 20),
@@ -19,9 +8,19 @@ def test1(num, expected):
     (1, 9, 9),
     (0, 5, 0)
 ])
-def test2(length, width, expected):
+def test1(length, width, expected):
     assert rectangle_area(length, width) == expected
 
+
+@pytest.mark.parametrize("num, expected", [
+    (5, "Positive"),
+    (-7, "Negative"),
+    (0, "Neither"),
+    (123, "Positive"),
+    (-1, "Negative")
+])
+def test2(num, expected):
+    assert check_number(num) == expected
 
 @pytest.mark.parametrize("num, expected", [
     (25, True),

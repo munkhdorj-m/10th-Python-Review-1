@@ -1,48 +1,56 @@
 import pytest
-from assignment import find_ticket_price, is_four_digit_number, is_divisible, sum_of_even_numbers, convert_time_to_days_hours
+from assignment import check_number, rectangle_area, is_divisible_by_5, sum_is_even_or_odd, first_last_equal
 
-@pytest.mark.parametrize("age, expected", [
-    (2, 0),
-    (5, 10),
-    (30, 15),
-    (70, 12)
+@pytest.mark.parametrize("num, expected", [
+    (5, "Positive"),
+    (-7, "Negative"),
+    (0, "Neither"),
+    (123, "Positive"),
+    (-1, "Negative")
 ])
-def test1(age, expected):
-    assert find_ticket_price(age) == expected
+def test1(num, expected):
+    assert check_number(num) == expected
 
-@pytest.mark.parametrize("number, expected", [
-    (1234, True),
-    (99, False),
-    (10000, False),
-    (5678, True)
+
+@pytest.mark.parametrize("length, width, expected", [
+    (5, 3, 15),
+    (10, 2, 20),
+    (7, 7, 49),
+    (1, 9, 9),
+    (0, 5, 0)
 ])
-def test2(number, expected):
-    assert is_four_digit_number(number) == expected
+def test2(length, width, expected):
+    assert rectangle_area(length, width) == expected
 
-@pytest.mark.parametrize("num1, num2, expected", [
-    (10, 2, True),
-    (15, 4, False),
-    (20, 5, True),
-    (7, 3, False)
+
+@pytest.mark.parametrize("num, expected", [
+    (25, True),
+    (12, False),
+    (0, True),
+    (55, True),
+    (7, False)
 ])
-def test3(num1, num2, expected):
-    assert is_divisible(num1, num2) == expected
+def test3(num, expected):
+    assert is_divisible_by_5(num) == expected
 
-@pytest.mark.parametrize("num1, num2, num3, expected", [
-    (2, 4, 6, 12),
-    (1, 2, 3, 2),
-    (5, 7, 8, 8),
-    (12, 15, 9, 12)
+
+@pytest.mark.parametrize("a, b, c, d, expected", [
+    (1, 2, 3, 4, "Even"),   # sum = 10
+    (5, 7, 9, 11, "Odd"),   # sum = 32
+    (2, 2, 2, 2, "Even"),   # sum = 8
+    (0, 1, 2, 3, "Even"),   # sum = 6
+    (9, 9, 9, 9, "Even")    # sum = 36
 ])
-def test4(num1, num2, num3, expected):
-    assert sum_of_even_numbers(num1, num2, num3) == expected
+def test4(a, b, c, d, expected):
+    assert sum_is_even_or_odd(a, b, c, d) == expected
 
 
-@pytest.mark.parametrize("hours, expected", [
-    (48, (2, 0)),
-    (25, (1, 1)),
-    (72, (3, 0)),
-    (49, (2, 1))
+@pytest.mark.parametrize("num, expected", [
+    (121, True),
+    (4564, True),
+    (89, False),
+    (7, True),      # single digit → same first & last
+    (12345, False)
 ])
-def test5(hours, expected):
-    assert convert_time_to_days_hours(hours) == expected
+def test5(num, expected):
+    assert first_last_equal(num) == expected

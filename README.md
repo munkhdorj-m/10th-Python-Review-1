@@ -1,30 +1,26 @@
-# Python IF/ELSE
+# Python Review 1
 
-You have to return boolean types for true and false:
+Python Loops PPT:
+https://docs.google.com/presentation/d/1cRZd43s_xyNBLZ6vgFiUILPUMMtWDtBO/edit?usp=sharing&ouid=118175980541210638913&rtpof=true&sd=true
 
-    return False
-    return True
-
-Not
-
-    return "False"
-    return "True"
 ---
 
 ## Exercise 1
 
 **Problem:**
 
-Find the price of the cinema ticket based on age. If age is under 3 years old, the ticket is free. If ages 3-12, tickets are $10. If 65 or older, tickets are $12. Tickets for all other ages are $15.
+Input the length and width of a rectangle. Calculate and print the area.
 
 **Example:**
 
-| Input | Output |
-|-------|--------|
-| 2     | 0      |
-| 5     | 10     |
-| 30    | 15     |
-| 70    | 12     |
+    Input: 5 3
+    Output: 15
+    
+    Input: 10 2
+    Output: 20
+    
+    Input: 7 7
+    Output: 49
 
 ---
 
@@ -32,16 +28,19 @@ Find the price of the cinema ticket based on age. If age is under 3 years old, t
 
 **Problem:**
 
-Check if a number has 4 digits or not.
+Check if a number is positive or negative. (_A number greater than 0 is positive, less than 0 is negative, and 0 is neither._)
 
 **Example:**
 
-| Input   | Output |
-|---------|--------|
-| 1234    | True   |
-| 99      | False  |
-| 10000   | False  |
-| 5678    | True   |
+    Input: 5
+    Output: Positive
+    
+    Input: -7
+    Output: Negative
+    
+    Input: 0
+    Output: Neither
+
 
 ---
 
@@ -49,49 +48,53 @@ Check if a number has 4 digits or not.
 
 **Problem:**
 
-Check whether one number is divisible by the other number.
+Check if a number is divisible by 5.
 
-**Example:**
+**Example**
 
-| Input  | Output |
-|--------|--------|
-| 10, 2  | True   |
-| 15, 4  | False  |
-| 20, 5  | True   |
-| 7, 3   | False  |
-
+    Input: 25
+    Output: True
+    
+    Input: 12
+    Output: False
+    
+    Input: 0
+    Output: True
 ---
 
 ## Exercise 4
 
 **Problem:**
 
-Find the sum of the even numbers from 3 numbers.
+Input 4 numbers and check if their sum is even or odd.
 
-**Example:**
+**Example**
 
-| Input       | Output |
-|-------------|--------|
-| 2, 4, 6     | 12     |
-| 1, 2, 3     | 2      |
-| 5, 7, 8     | 8      |
-| 12, 15, 9   | 12     |
-
+    Input: 1 2 3 4
+    Output: Even
+    
+    Input: 5 7 9 11
+    Output: Odd
+    
+    Input: 2 2 2 2
+    Output: Even
 ---
 
 ## Exercise 5
 
 **Problem:**
 
-Convert a time given in hours to days and hours.
+Input a number and check if the first and last digits are equal.
 
-**Example:**
+**Example**
 
-| Input  | Output    |
-|--------|-----------|
-| 48     |  2  0     |
-| 25     |  1  1     |
-| 72     |  3  0     |
-| 39     |  1  15     |
-
+    Input: 121
+    Output: True
+    
+    Input: 4564
+    Output: True
+    
+    Input: 89
+    Output: False
 ---
+

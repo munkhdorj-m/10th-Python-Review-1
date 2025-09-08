@@ -53,5 +53,5 @@ def test4(a, b, c, d, expected):
     (123, False),    # 1+2+3=6 → 123%6=3 → False
     (222, True)      # 2+2+2=6 → 222%6=0 → True
 ])
-def test_divisible_by_sum_of_digits(num, expected):
+def test5(num, expected):
     assert divisible_by_sum_of_digits(num) == expected

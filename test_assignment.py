@@ -1,5 +1,5 @@
 import pytest
-from assignment import check_number, rectangle_area, is_divisible_by_5, sum_is_even_or_odd, first_last_equal
+from assignment import check_number, rectangle_area, is_divisible_by_5, sum_is_even_or_odd, divisible_by_sum_of_digits
 
 @pytest.mark.parametrize("num, expected", [
     (5, "Positive"),
@@ -35,22 +35,23 @@ def test3(num, expected):
 
 
 @pytest.mark.parametrize("a, b, c, d, expected", [
-    (1, 2, 3, 4, "Even"),   # sum = 10
-    (5, 7, 9, 11, "Odd"),   # sum = 32
-    (2, 2, 2, 2, "Even"),   # sum = 8
-    (0, 1, 2, 3, "Even"),   # sum = 6
-    (9, 9, 9, 9, "Even")    # sum = 36
+    (1, 2, 3, 4, "Even"), 
+    (1, 3, 4, 5, "Odd"),  
+    (2, 2, 2, 2, "Even"),  
+    (0, 1, 7, 3, "Odd"),  
+    (9, 9, 9, 9, "Even")   
 ])
 def test4(a, b, c, d, expected):
     assert sum_is_even_or_odd(a, b, c, d) == expected
 
 
 @pytest.mark.parametrize("num, expected", [
-    (121, True),
-    (4564, True),
-    (89, False),
-    (7, True),      # single digit → same first & last
-    (12345, False)
+    (121, False),    # 1+2+1=4 → 121%4=1 → False
+    (456, False),    # 4+5+6=15 → 456%15=6 → False
+    (132, True),     # 1+3+2=6 → 132%6=0 → True
+    (111, True),     # 1+1+1=3 → 111%3=0 → True
+    (123, False),    # 1+2+3=6 → 123%6=3 → False
+    (222, True)      # 2+2+2=6 → 222%6=0 → True
 ])
-def test5(num, expected):
-    assert first_last_equal(num) == expected
+def test_divisible_by_sum_of_digits(num, expected):
+    assert divisible_by_sum_of_digits(num) == expected
